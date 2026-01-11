@@ -1,1 +1,19 @@
+--- The Data Set I Am Working With --
+https://github.com/AlexTheAnalyst/Excel-Tutorial/raw/refs/heads/main/Excel%20Project%20Dataset.xlsx
 
+-- I started by cleaning the data --
+I remove duplicates by using the builtin Excel duplicate remover. I selected the datset, click the Data heading on the ribbon then selected remove duplicates.
+Next, I used the find and replace function to make the Marital Status and Gender columns consistant and easy to understand by replacing letters with words. Eg M is Male, F is Female.
+Then, I removed the decimals from the Income column by selecting Currency in the number formatting menu and removing the extra zeros.
+
+-- Created ranges using nested statements --
+I created age ranges to group the age data together by createing a new column called Age Range. Then I created ranges using IF statements. 
+1. =IF(L2<31,"Young Adult","Invalid")
+2. I created another age range using a nested statement;
+   =IF(L2>31,"Adult",IF(L2<31,"Young Adult","Invalid"))
+3. I divide the age ranges further by adding to the nested statement;
+   =IF(L2>54,"Senior",IF(L2>31,"Adult",IF(L2<31,"Young Adult","invalid"))) 
+
+-- Created a Pivot Table --
+Once the data was cleaned I opened a new spreadsheet, clicked Insert - pivot table, and added the table range. 
+I selected the type of visualization I wanted to use. 
